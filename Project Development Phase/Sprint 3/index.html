@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>University Admission Predictor</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
+<style type="text/css">
+	
+	h1,h2{
+		font-family: "Times New Roman", Times, serif;
+		color: black;
+	}
+	h2,h1,form,p,b{
+		text-align: center;
+		color: purple;
+		font-size: 1rem
+	}
+	label,b{
+		font-family: "Times New Roman", Times, serif;
+		color: purple;
+		font-size: 1rem
+	}
+	.elements{
+		padding-top: 2px;
+		font-family: "Times New Roman", Times, serif;
+		font-size: 1.5rem
+		position:absolute
+		z-index: 1;
+	}
+	.background {
+  background-image: url(https://dubeat.com/wp-content/uploads/2021/08/admiss.webp);
+ position:relative;
+  width: 100%;
+    height: 100%;
+}
+.blur {
+  background: rgba(227, 210, 210, 0.8); // Make sure this color has an opacity of less than 1
+  backdrop-filter: blur(40px); // This be the blur
+  position:absolute;
+	width: 100%;
+	  height: 100%;
+}
+
+</style>
+<body>
+<div class="background">
+  <div class="blur">
+<center>
+	<h1 style="font-size: 4rem; text-decoration-line: underline; text-decoration-thickness: auto;">University Admission Eligibility Predictor</h1>
+
+	<form action="/predict" method="post" class="elements" style="font-size: 1rem;">
+		<p style="font-size: 2rem; font-family: Times New Roman, Times, serif; color:purple"> <strong> DETAILS </strong></p>
+		<p class="elements"><b>GRE Score</b></p>
+		<p><input type="text" name="gre" placeholder="Score range 0-340" style=" border-radius: 8px;"></p>
+		<p class="elements"><b>TOEFL Score</b></p>
+		<p><input type="text" name="tofl" placeholder="Score range 0-120" style=" border-radius: 8px;"></p>
+		<p class="elements"><label><b>University Rating</b></label> </p>
+		<select name="rating" style=" border-radius: 8px;">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+        </select>
+		<br>
+		<p class="elements"><b>SOP</b></p>
+		<p><input type="text" name="sop" placeholder="Score range 0-5" style=" border-radius: 8px;"></p>
+		<p class="elements"><b>LOR</b></p>
+		<p><input type="text" name="lor" placeholder="Score range 0-5" style=" border-radius: 8px;"></p>
+		<p class="elements"><b>CGPA</b></p>
+		<p><input type="text" name="cgpa" placeholder="Score range 0-10" style=" border-radius: 8px;"></p>
+		<p class="elements"><label><b>Research</b></label></p>
+		<select name="research" style=" border-radius: 8px;">
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+        </select>
+
+        
+
+
+		<p class="elements"> <input type = "submit" value = "submit" style=" border-radius: 8px;"/> </p>
+	</form>
+</center>
+	  </div>
+	</div>
+</body>
+</html>
